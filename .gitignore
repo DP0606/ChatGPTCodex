@@ -1,0 +1,17 @@
+# .NET
+bin/
+obj/
+
+# Angular
+node_modules/
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# DB
+*.db
