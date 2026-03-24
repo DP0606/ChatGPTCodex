@@ -37,8 +37,3 @@ Frontend očekuje backend na `https://localhost:5001`.
 ## Napomena o logičkom modelu iz DOCX-a
 
 Budući da sadržaj dokumenta `Logicki_model_PX_baza_podataka.docx` nije bio dostupan u repozitoriju, implementiran je generički normalizirani model (`Dataset -> Variables -> Values + Observations`) kao polazna točka. Nakon dostave DOCX modela, entitete/migracije treba uskladiti 1:1 s formalnim modelom.
-
-## NuGet napomena
-
-Ako `dotnet restore` javlja grešku za `PCAxis.Paxiom`, koristi se paket `PCAxis.Core` (sadrži Paxiom API).
-
