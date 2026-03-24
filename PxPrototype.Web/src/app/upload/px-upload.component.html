@@ -1,0 +1,35 @@
+<p-card header="Učitavanje .px datoteke">
+  <p-fileUpload
+    mode="basic"
+    name="px"
+    chooseLabel="Odaberi .px"
+    accept=".px"
+    [customUpload]="true"
+    (uploadHandler)="upload($event)">
+  </p-fileUpload>
+
+  <div style="margin-top: 1rem" *ngIf="message">
+    <p-message [severity]="messageSeverity" [text]="message"></p-message>
+  </div>
+</p-card>
+
+<p-card header="Spremljeni skupovi" styleClass="mt-3">
+  <p-table [value]="datasets">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Datoteka</th>
+        <th>Naslov</th>
+        <th>Varijable</th>
+        <th>Observacije</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-row>
+      <tr>
+        <td>{{ row.fileName }}</td>
+        <td>{{ row.title }}</td>
+        <td>{{ row.variables }}</td>
+        <td>{{ row.observations }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</p-card>
